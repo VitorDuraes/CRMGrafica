@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AvdkFvOx/bFOn1r2aZnK8CF06iqbyjbk+JcqisCwkE8=",
+  "Hash": "xTw9soCcLioB//J78DEf/MF0UtOFBSuLr/Nx7xBfK54=",
   "Source": "CRMGraficaBlazor",
   "BasePath": "_content/CRMGraficaBlazor",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CRMGraficaBlazor/wwwroot",
       "Source": "CRMGraficaBlazor",
-      "ContentRoot": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/CRMGraficaBlazor.styles.css",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/CRMGraficaBlazor.styles.css",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/CRMGraficaBlazor",
       "RelativePath": "CRMGraficaBlazor.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/CRMGraficaBlazor.styles.css"
+      "OriginalItemSpec": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/CRMGraficaBlazor.styles.css"
     },
     {
-      "Identity": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CRMGraficaBlazor.bundle.scp.css",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CRMGraficaBlazor.bundle.scp.css",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/CRMGraficaBlazor",
       "RelativePath": "CRMGraficaBlazor.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CRMGraficaBlazor.bundle.scp.css"
+      "OriginalItemSpec": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CRMGraficaBlazor.bundle.scp.css"
     },
     {
-      "Identity": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/app.css",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/app.css",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/favicon.png",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/favicon.png",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
-      "Identity": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/js/download.js",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/js/download.js",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
       "RelativePath": "js/download.js",
       "AssetKind": "All",

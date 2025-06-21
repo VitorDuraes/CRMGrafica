@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CRMGraficaBlazor.bundle.scp.css",
+      "Id": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CRMGraficaBlazor.bundle.scp.css",
       "PackagePath": "staticwebassets/CRMGraficaBlazor.bundle.scp.css"
     },
     {
-      "Id": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/app.css",
+      "Id": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/app.css",
       "PackagePath": "staticwebassets/app.css"
     },
     {
-      "Id": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css",
+      "Id": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css",
       "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Id": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/favicon.png",
+      "Id": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "/mnt/s/CRMGrafica/CRMGrafica/CRMGraficaBlazor/wwwroot/js/download.js",
+      "Id": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/js/download.js",
       "PackagePath": "staticwebassets/js/download.js"
     },
     {

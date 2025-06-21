@@ -84,10 +84,10 @@
                                 </td>
                                 <td>@cliente.FrequenciaCompra</td>
                                 <td>
-                                    <button class="btn btn-sm btn-outline-primary me-1" @onclick="() => EditarCliente(cliente)">
+                                    <button class="btn btn-sm text-primary" @onclick="() => EditarCliente(cliente)" title="Editar">
                                         <i class="bi bi-pencil"></i>
                                     </button>
-                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => ExcluirCliente(cliente.Id)">
+                                    <button class="btn btn-sm text-danger" @onclick="() => ExcluirCliente(cliente.Id)" title="Excluir">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </td>
