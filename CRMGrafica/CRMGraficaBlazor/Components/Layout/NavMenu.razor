@@ -1,0 +1,42 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">CRM Gráfica</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Dashboard
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="clientes">
+                <span class="bi bi-people-fill-nav-menu" aria-hidden="true"></span> Clientes
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="pedidos">
+                <span class="bi bi-cart-fill-nav-menu" aria-hidden="true"></span> Pedidos
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="relatorios">
+                <span class="bi bi-graph-up-nav-menu" aria-hidden="true"></span> Relatórios
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="previsao-vendas">
+                <span class="bi bi-cpu-nav-menu" aria-hidden="true"></span> IA - Previsão
+            </NavLink>
+        </div>
+    </nav>
+</div>
+

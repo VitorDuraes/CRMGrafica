@@ -1,0 +1,7 @@
+/mnt/s/CRMGrafica/CRMGrafica/out/CRMGraficaBlazor
+/mnt/s/CRMGrafica/CRMGrafica/out/appsettings.Development.json
+/mnt/s/CRMGrafica/CRMGrafica/out/appsettings.json
+/mnt/s/CRMGrafica/CRMGrafica/out/CRMGraficaBlazor.dll
+/mnt/s/CRMGrafica/CRMGrafica/out/CRMGraficaBlazor.deps.json
+/mnt/s/CRMGrafica/CRMGrafica/out/CRMGraficaBlazor.runtimeconfig.json
+/mnt/s/CRMGrafica/CRMGrafica/out/CRMGraficaBlazor.pdb

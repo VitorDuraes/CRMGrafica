@@ -1,0 +1,217 @@
+@page "/previsao-vendas"
+@using CRMGraficaBlazor.DTO
+@using CRMGraficaBlazor.Services
+@using System.Text.Json
+@using static CRMGraficaBlazor.Services.IAService
+@inject IAService IAService
+@inject ReportService ReportService
+@rendermode InteractiveServer
+
+<PageTitle>Previsão de Vendas - CRM Gráfica</PageTitle>
+
+<h1>Previsão de Vendas com IA</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5>Histórico de Vendas Mensais</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Período (últimos meses):</label>
+                    <input type="number" class="form-control" @bind="ultimosMeses" min="3" max="24" />
+                </div>
+                <button class="btn btn-primary" @onclick="CarregarHistorico">Carregar Histórico</button>
+                
+                @if (historicoVendas.Any())
+                {
+                    <div class="mt-3">
+                        <h6>Dados do Histórico:</h6>
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Período</th>
+                                        <th>Receita Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   @foreach (var item in dadosHistorico)
+{
+    var anoMes = item.GetProperty("anoMes").GetString();
+    var receitaTotal = item.GetProperty("receitaTotal").GetDouble();
+
+    <tr>
+        <td>@anoMes</td>
+        <td>R$ @receitaTotal.ToString("F2")</td>
+    </tr>
+}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5>Previsão para Próximo Mês</h5>
+            </div>
+            <div class="card-body">
+                @if (historicoVendas.Any())
+                {
+                    <button class="btn btn-success" @onclick="GerarPrevisao" disabled="@carregandoPrevisao">
+                        @if (carregandoPrevisao)
+                        {
+                            <span class="spinner-border spinner-border-sm me-2"></span>
+                        }
+                        Gerar Previsão
+                    </button>
+                    
+                   @if (previsaoGerada && previsaoVendas.Any())
+                    {
+                        <div class="mt-3">
+                        <div class="alert alert-info">
+                        <h6>Previsão de Vendas:</h6>
+                        <h4 class="text-primary">R$ @previsaoVendas[0].ValorPrevisto.ToString("F2")</h4>
+                        <small class="text-muted">
+                            Baseado nos últimos @ultimosMeses meses de dados
+                        </small>
+            </div>
+        </div>
+        }
+                }
+                else
+                {
+                    <p class="text-muted">Carregue o histórico primeiro para gerar a previsão.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (historicoVendas.Any())
+{
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Análise dos Dados</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h6>Média Mensal</h6>
+                                <h4 class="text-info">R$ @mediaMensal.ToString("F2")</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h6>Maior Receita</h6>
+                                <h4 class="text-success">R$ @maiorReceita.ToString("F2")</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h6>Menor Receita</h6>
+                                <h4 class="text-warning">R$ @menorReceita.ToString("F2")</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h6>Total Período</h6>
+                                <h4 class="text-primary">R$ @totalPeriodo.ToString("F2")</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private int ultimosMeses = 6;
+    private List<double> historicoVendas = new();
+    private List<dynamic> dadosHistorico = new();
+    private List<PrevisaoVendaDto> previsaoVendas = new List<PrevisaoVendaDto>();
+    private bool previsaoGerada = false;
+    private bool carregandoPrevisao = false;
+    
+    private double mediaMensal = 0;
+    private double maiorReceita = 0;
+    private double menorReceita = 0;
+    private double totalPeriodo = 0;
+
+    private void CalcularEstatisticas()
+    {
+        if (!historicoVendas.Any()) return;
+
+        mediaMensal = historicoVendas.Average();
+        maiorReceita = historicoVendas.Max();
+        menorReceita = historicoVendas.Min();
+        totalPeriodo = historicoVendas.Sum();
+    }
+
+    private async Task CarregarHistorico()
+    {
+        try
+        {
+            var dados = await ReportService.GetReceitaMensalHistoricaAsync(ultimosMeses);
+            dadosHistorico = dados.Cast<dynamic>().ToList();
+            
+            historicoVendas.Clear();
+            foreach (var item in dadosHistorico)
+            {
+                var jsonElement = (JsonElement)item;
+                if (jsonElement.TryGetProperty("receitaTotal", out var receitaProperty))
+                {
+                    historicoVendas.Add(receitaProperty.GetDouble());
+                }
+            }
+
+            CalcularEstatisticas();
+            previsaoGerada = false;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao carregar histórico: {ex.Message}");
+        }
+    }
+
+    private async Task GerarPrevisao()
+{
+    if (historicoVendas.Count < 3)
+    {
+        // Exibir mensagem pro usuário
+        Console.WriteLine("É necessário pelo menos 3 meses de histórico para gerar previsão.");
+        return;
+    }
+
+    carregandoPrevisao = true;
+    try
+    {
+        var request = new PrevisaoRequest
+        {
+            Historico = historicoVendas,
+            DataBase = DateTime.Now.ToString("yyyy-MM"),
+            QuantidadeMeses = 1
+        };
+
+        previsaoVendas = await IAService.PreverVendasAsync(request);
+        previsaoGerada = true;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Erro ao gerar previsão: {ex.Message}");
+    }
+    finally
+    {
+        carregandoPrevisao = false;
+    }
+}
+}

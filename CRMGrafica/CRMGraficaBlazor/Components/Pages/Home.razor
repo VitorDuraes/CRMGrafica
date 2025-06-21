@@ -1,0 +1,124 @@
+@page "/"
+@using CRMGraficaBlazor.Services
+@using CRMGraficaBlazor.Models
+@inject ClienteService ClienteService
+@inject PedidoService PedidoService
+@rendermode InteractiveServer
+
+<PageTitle>Dashboard - CRM Gráfica</PageTitle>
+
+<h1>Dashboard - CRM Gráfica</h1>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Total de Clientes</div>
+            <div class="card-body">
+                <h4 class="card-title">@totalClientes</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Total de Pedidos</div>
+            <div class="card-body">
+                <h4 class="card-title">@totalPedidos</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-header">Pedidos em Produção</div>
+            <div class="card-body">
+                <h4 class="card-title">@pedidosProducao</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Pedidos Finalizados</div>
+            <div class="card-body">
+                <h4 class="card-title">@pedidosFinalizados</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Últimos Clientes</h5>
+            </div>
+            <div class="card-body">
+                @if (ultimosClientes.Any())
+                {
+                    <div class="list-group">
+                        @foreach (var cliente in ultimosClientes.Take(5))
+                        {
+                            <div class="list-group-item">
+                                <strong>@cliente.Nome</strong><br />
+                                <small class="text-muted">@cliente.Contato - @cliente.Tipo</small>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p>Nenhum cliente encontrado.</p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Últimos Pedidos</h5>
+            </div>
+            <div class="card-body">
+                @if (ultimosPedidos.Any())
+                {
+                    <div class="list-group">
+                        @foreach (var pedido in ultimosPedidos.Take(5))
+                        {
+                            <div class="list-group-item">
+                                <strong>@pedido.ServicoSolicitado</strong><br />
+                                <small class="text-muted">R$ @pedido.Valor.ToString("F2") - @pedido.Status</small>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p>Nenhum pedido encontrado.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int totalClientes = 0;
+    private int totalPedidos = 0;
+    private int pedidosProducao = 0;
+    private int pedidosFinalizados = 0;
+    private List<Cliente> ultimosClientes = new();
+    private List<Pedido> ultimosPedidos = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarDados();
+    }
+
+    private async Task CarregarDados()
+    {
+        ultimosClientes = await ClienteService.GetClientesAsync();
+        ultimosPedidos = await PedidoService.GetPedidosAsync();
+
+        totalClientes = ultimosClientes.Count;
+        totalPedidos = ultimosPedidos.Count;
+        pedidosProducao = ultimosPedidos.Count(p => p.Status == StatusPedido.Producao);
+        pedidosFinalizados = ultimosPedidos.Count(p => p.Status == StatusPedido.Finalizado || p.Status == StatusPedido.Entregue);
+    }
+}
+

@@ -1,0 +1,206 @@
+@page "/relatorios"
+@using CRMGraficaBlazor.Services
+@inject ReportService ReportService
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+
+<PageTitle>Relatórios - CRM Gráfica</PageTitle>
+
+<h1>Relatórios e Exportações</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Clientes Mais Valiosos</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Número de clientes:</label>
+                    <input type="number" class="form-control" @bind="topNClientes" min="1" max="50" />
+                </div>
+                <button class="btn btn-primary me-2" @onclick="CarregarClientesValiosos">
+                    Carregar Dados
+                </button>
+                <button class="btn btn-success" @onclick="ExportarClientesValiosos" disabled="@exportandoClientes">
+                    @if (exportandoClientes)
+                    {
+                        <span class="spinner-border spinner-border-sm me-2"></span>
+                    }
+                    Exportar Excel
+                </button>
+                
+                @if (clientesValiosos.Any())
+                {
+                    <div class="mt-3">
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Cliente</th>
+                                        <th>Volume Total</th>
+                                        <th>Nº Pedidos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var cliente in clientesValiosos)
+                                    {
+                                        <tr>
+                                            <td>@GetPropertyValue(cliente, "nomeCliente")</td>
+                                            <td>R$ @GetPropertyValue(cliente, "volumeTotalCompras")</td>
+                                            <td>@GetPropertyValue(cliente, "numeroPedidos")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Receita Mensal Histórica</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Últimos meses:</label>
+                    <input type="number" class="form-control" @bind="ultimosMeses" min="3" max="24" />
+                </div>
+                <button class="btn btn-primary" @onclick="CarregarReceitaMensal">
+                    Carregar Dados
+                </button>
+                
+                @if (receitaMensal.Any())
+                {
+                    <div class="mt-3">
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Período</th>
+                                        <th>Receita Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in receitaMensal)
+                                    {
+                                        <tr>
+                                            <td>@GetPropertyValue(item, "anoMes")</td>
+                                            <td>R$ @GetPropertyValue(item, "receitaTotal")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (mensagemSucesso != null)
+{
+    <div class="alert alert-success mt-3">
+        @mensagemSucesso
+    </div>
+}
+
+@if (mensagemErro != null)
+{
+    <div class="alert alert-danger mt-3">
+        @mensagemErro
+    </div>
+}
+
+@code {
+    private int topNClientes = 10;
+    private int ultimosMeses = 6;
+    private List<object> clientesValiosos = new();
+    private List<object> receitaMensal = new();
+    private bool exportandoClientes = false;
+    private string? mensagemSucesso = null;
+    private string? mensagemErro = null;
+
+    private async Task CarregarClientesValiosos()
+    {
+        try
+        {
+            clientesValiosos = await ReportService.GetClientesMaisValiososAsync(topNClientes);
+            LimparMensagens();
+        }
+        catch (Exception ex)
+        {
+            mensagemErro = $"Erro ao carregar clientes: {ex.Message}";
+        }
+    }
+
+    private async Task CarregarReceitaMensal()
+    {
+        try
+        {
+            receitaMensal = await ReportService.GetReceitaMensalHistoricaAsync(ultimosMeses);
+            LimparMensagens();
+        }
+        catch (Exception ex)
+        {
+            mensagemErro = $"Erro ao carregar receita mensal: {ex.Message}";
+        }
+    }
+
+    private async Task ExportarClientesValiosos()
+    {
+        exportandoClientes = true;
+        try
+        {
+            var dados = await ReportService.ExportarClientesMaisValiososAsync(topNClientes);
+            if (dados != null)
+            {
+                var fileName = $"clientes_valiosos_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+                await JSRuntime.InvokeVoidAsync("downloadFile", fileName, Convert.ToBase64String(dados));
+                mensagemSucesso = "Arquivo Excel exportado com sucesso!";
+            }
+            else
+            {
+                mensagemErro = "Erro ao gerar arquivo Excel.";
+            }
+        }
+        catch (Exception ex)
+        {
+            mensagemErro = $"Erro ao exportar: {ex.Message}";
+        }
+        finally
+        {
+            exportandoClientes = false;
+        }
+    }
+
+    private string GetPropertyValue(object obj, string propertyName)
+    {
+        try
+        {
+            if (obj is System.Text.Json.JsonElement jsonElement)
+            {
+                if (jsonElement.TryGetProperty(propertyName, out var property))
+                {
+                    return property.ToString();
+                }
+            }
+            return "N/A";
+        }
+        catch
+        {
+            return "N/A";
+        }
+    }
+
+    private void LimparMensagens()
+    {
+        mensagemSucesso = null;
+        mensagemErro = null;
+    }
+}
+

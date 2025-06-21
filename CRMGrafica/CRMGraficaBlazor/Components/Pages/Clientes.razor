@@ -1,0 +1,197 @@
+@page "/clientes"
+@using CRMGraficaBlazor.Services
+@using CRMGraficaBlazor.Models
+@inject ClienteService ClienteService
+@rendermode InteractiveServer
+
+<PageTitle>Clientes - CRM Gráfica</PageTitle>
+
+<h1>Gerenciamento de Clientes</h1>
+
+<div class="row mb-3">
+    <div class="col">
+        <button class="btn btn-primary" @onclick="MostrarFormulario">
+            <i class="bi bi-plus"></i> Novo Cliente
+        </button>
+    </div>
+</div>
+
+@if (mostrarForm)
+{
+    <div class="card mb-3">
+        <div class="card-header">
+            <h5>@(clienteEditando?.Id > 0 ? "Editar Cliente" : "Novo Cliente")</h5>
+        </div>
+        <div class="card-body">
+            <EditForm Model="novoCliente" OnValidSubmit="SalvarCliente">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Nome:</label>
+                            <InputText class="form-control" @bind-Value="novoCliente.Nome" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Contato:</label>
+                            <InputText class="form-control" @bind-Value="novoCliente.Contato" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success me-2">Salvar</button>
+                    <button type="button" class="btn btn-secondary" @onclick="CancelarEdicao">Cancelar</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista de Clientes</h5>
+    </div>
+    <div class="card-body">
+        @if (clientes.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Contato</th>
+                            <th>Tipo</th>
+                            <th>Frequência</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cliente in clientes)
+                        {
+                            <tr>
+                                <td>@cliente.Id</td>
+                                <td>@cliente.Nome</td>
+                                <td>@cliente.Contato</td>
+                                <td>
+                                    <span class="badge @GetTipoClienteBadgeClass(cliente.Tipo)">
+                                        @cliente.Tipo
+                                    </span>
+                                </td>
+                                <td>@cliente.FrequenciaCompra</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1" @onclick="() => EditarCliente(cliente)">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => ExcluirCliente(cliente.Id)">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p>Nenhum cliente encontrado.</p>
+        }
+    </div>
+</div>
+
+@code {
+    private List<Cliente> clientes = new();
+    private CreateClienteDto novoCliente = new();
+    private Cliente? clienteEditando = null;
+    private bool mostrarForm = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarClientes();
+    }
+
+    private async Task CarregarClientes()
+    {
+        clientes = await ClienteService.GetClientesAsync();
+    }
+
+    private void MostrarFormulario()
+    {
+        novoCliente = new CreateClienteDto();
+        clienteEditando = null;
+        mostrarForm = true;
+    }
+
+    private void EditarCliente(Cliente cliente)
+    {
+        clienteEditando = cliente;
+        novoCliente = new CreateClienteDto
+        {
+            Nome = cliente.Nome,
+            Contato = cliente.Contato,
+            FrequenciaCompra = cliente.FrequenciaCompra,
+            Tipo = cliente.Tipo
+        };
+        mostrarForm = true;
+    }
+
+    private async Task SalvarCliente()
+    {
+        bool sucesso;
+        
+        if (clienteEditando?.Id > 0)
+        {
+            var clienteAtualizado = new Cliente
+            {
+                Id = clienteEditando.Id,
+                Nome = novoCliente.Nome,
+                Contato = novoCliente.Contato,
+                FrequenciaCompra = novoCliente.FrequenciaCompra,
+                Tipo = novoCliente.Tipo
+            };
+            sucesso = await ClienteService.UpdateClienteAsync(clienteEditando.Id, clienteAtualizado);
+        }
+        else
+        {
+            sucesso = await ClienteService.CreateClienteAsync(novoCliente);
+        }
+
+        if (sucesso)
+        {
+            await CarregarClientes();
+            CancelarEdicao();
+        }
+    }
+
+    private void CancelarEdicao()
+    {
+        mostrarForm = false;
+        novoCliente = new CreateClienteDto();
+        clienteEditando = null;
+    }
+
+    private async Task ExcluirCliente(int id)
+    {
+        if (await ClienteService.DeleteClienteAsync(id))
+        {
+            await CarregarClientes();
+        }
+    }
+
+    private string GetTipoClienteBadgeClass(TipoCliente tipo)
+    {
+        return tipo switch
+        {
+            TipoCliente.Novo => "bg-primary",
+            TipoCliente.Recorrente => "bg-success",
+            TipoCliente.Inativo => "bg-secondary",
+            _ => "bg-light"
+        };
+    }
+}
+

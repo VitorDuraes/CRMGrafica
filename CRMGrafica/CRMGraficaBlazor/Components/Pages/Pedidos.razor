@@ -1,0 +1,191 @@
+@page "/pedidos"
+@using CRMGraficaBlazor.Services
+@using CRMGraficaBlazor.Models
+@inject PedidoService PedidoService
+@inject ClienteService ClienteService
+@rendermode InteractiveServer
+
+<PageTitle>Pedidos - CRM Gráfica</PageTitle>
+
+<h1>Gerenciamento de Pedidos</h1>
+
+<div class="row mb-3">
+    <div class="col">
+        <button class="btn btn-primary" @onclick="MostrarFormulario">
+            <i class="bi bi-plus"></i> Novo Pedido
+        </button>
+    </div>
+</div>
+
+@if (mostrarForm)
+{
+    <div class="card mb-3">
+        <div class="card-header">
+            <h5>Novo Pedido</h5>
+        </div>
+        <div class="card-body">
+            <EditForm Model="novoPedido" OnValidSubmit="SalvarPedido">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Cliente:</label>
+                            <InputSelect class="form-select" @bind-Value="novoPedido.ClienteId">
+                                <option value="0">Selecione um cliente</option>
+                                @foreach (var cliente in clientes)
+                                {
+                                    <option value="@cliente.Id">@cliente.Nome</option>
+                                }
+                            </InputSelect>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Serviço Solicitado:</label>
+                            <InputText class="form-control" @bind-Value="novoPedido.ServicoSolicitado" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="mb-3">
+                            <label class="form-label">Descrição:</label>
+                            <InputTextArea class="form-control" @bind-Value="novoPedido.Descricao" rows="3" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label class="form-label">Valor (R$):</label>
+                            <InputNumber class="form-control" @bind-Value="novoPedido.Valor" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success me-2">Salvar</button>
+                    <button type="button" class="btn btn-secondary" @onclick="CancelarEdicao">Cancelar</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista de Pedidos</h5>
+    </div>
+    <div class="card-body">
+        @if (pedidos.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Serviço</th>
+                            <th>Cliente</th>
+                            <th>Valor</th>
+                            <th>Status</th>
+                            <th>Data Criação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var pedido in pedidos)
+                        {
+                            <tr>
+                                <td>@pedido.Id</td>
+                                <td>@pedido.ServicoSolicitado</td>
+                                <td>@GetNomeCliente(pedido.ClienteId)</td>
+                                <td>R$ @pedido.Valor.ToString("F2")</td>
+                                <td>
+                                    <select class="form-select form-select-sm" @onchange="(e) => AtualizarStatus(pedido.Id, e)">
+                                        @foreach (StatusPedido status in Enum.GetValues<StatusPedido>())
+                                        {
+                                            <option value="@status" selected="@(pedido.Status == status)">@status</option>
+                                        }
+                                    </select>
+                                </td>
+                                <td>@pedido.DataCriacao.ToString("dd/MM/yyyy")</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => ExcluirPedido(pedido.Id)">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p>Nenhum pedido encontrado.</p>
+        }
+    </div>
+</div>
+
+@code {
+    private List<Pedido> pedidos = new();
+    private List<Cliente> clientes = new();
+    private CreatePedidoDto novoPedido = new();
+    private bool mostrarForm = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarDados();
+    }
+
+    private async Task CarregarDados()
+    {
+        pedidos = await PedidoService.GetPedidosAsync();
+        clientes = await ClienteService.GetClientesAsync();
+    }
+
+    private void MostrarFormulario()
+    {
+        novoPedido = new CreatePedidoDto();
+        mostrarForm = true;
+    }
+
+    private async Task SalvarPedido()
+    {
+        if (await PedidoService.CreatePedidoAsync(novoPedido))
+        {
+            await CarregarDados();
+            CancelarEdicao();
+        }
+    }
+
+    private void CancelarEdicao()
+    {
+        mostrarForm = false;
+        novoPedido = new CreatePedidoDto();
+    }
+
+    private async Task ExcluirPedido(int id)
+    {
+        if (await PedidoService.DeletePedidoAsync(id))
+        {
+            await CarregarDados();
+        }
+    }
+
+    private async Task AtualizarStatus(int pedidoId, ChangeEventArgs e)
+    {
+        if (Enum.TryParse<StatusPedido>(e.Value?.ToString(), out var novoStatus))
+        {
+            await PedidoService.UpdatePedidoStatusAsync(pedidoId, novoStatus);
+            await CarregarDados();
+        }
+    }
+
+    private string GetNomeCliente(int clienteId)
+    {
+        return clientes.FirstOrDefault(c => c.Id == clienteId)?.Nome ?? "Cliente não encontrado";
+    }
+}
+
