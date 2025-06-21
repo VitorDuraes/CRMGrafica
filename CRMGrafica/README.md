@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Sistema CRM completo desenvolvido para empresas gráficas, utilizando tecnologias modernas como .NET 8, Blazor Server, Entity Framework Core e integração com IA em Python para previsão de vendas.
+Sistema CRM completo desenvolvido para empresas gráficas, utilizando tecnologias modernas como .NET 8, Blazor Server, Entity Framework Core e com IA em ML.NET para previsão de vendas.
 
 ## Tecnologias Utilizadas
 
