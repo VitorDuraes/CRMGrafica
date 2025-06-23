@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c9H/jwfnvumxh2bmP4Zv0xV7D0EFX75ULG+crR+yaNo=",
+  "Hash": "xTw9soCcLioB//J78DEf/MF0UtOFBSuLr/Nx7xBfK54=",
   "Source": "CRMGraficaBlazor",
   "BasePath": "_content/CRMGraficaBlazor",
   "Mode": "Default",
@@ -8,21 +8,21 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "CRMGraficaBlazor\\wwwroot",
+      "Name": "CRMGraficaBlazor/wwwroot",
       "Source": "CRMGraficaBlazor",
-      "ContentRoot": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CRMGraficaBlazor.styles.css",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/CRMGraficaBlazor.styles.css",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/CRMGraficaBlazor",
-      "RelativePath": "CRMGraficaBlazor#[.{fingerprint}]?.styles.css",
+      "RelativePath": "CRMGraficaBlazor.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,19 +31,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "rphluyqovi",
-      "Integrity": "EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CRMGraficaBlazor.styles.css"
+      "OriginalItemSpec": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/bundle/CRMGraficaBlazor.styles.css"
     },
     {
-      "Identity": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CRMGraficaBlazor.bundle.scp.css",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CRMGraficaBlazor.bundle.scp.css",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/CRMGraficaBlazor",
-      "RelativePath": "CRMGraficaBlazor#[.{fingerprint}]!.bundle.scp.css",
+      "RelativePath": "CRMGraficaBlazor.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -52,692 +50,104 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "rphluyqovi",
-      "Integrity": "EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CRMGraficaBlazor.bundle.scp.css"
+      "OriginalItemSpec": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CRMGraficaBlazor.bundle.scp.css"
     },
     {
-      "Identity": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\app.css",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/app.css",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
-      "RelativePath": "app#[.{fingerprint}]?.css",
+      "RelativePath": "app.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "906phpobxc",
-      "Integrity": "qd+mDrrNzYh575TuD6xPjbhpZ0umaIzbXSralwdoIQY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
+      "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
-      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bpk8xqwxhs",
-      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
-      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8inm30yfxf",
-      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\favicon.png",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/favicon.png",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
-      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "RelativePath": "favicon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ifv42okdf2",
-      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
-      "Identity": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\js\\download.js",
+      "Identity": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/js/download.js",
       "SourceId": "CRMGraficaBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\",
+      "ContentRoot": "/mnt/s/CRMGrafica-master/CRMGrafica-master/CRMGrafica/CRMGraficaBlazor/wwwroot/",
       "BasePath": "_content/CRMGraficaBlazor",
-      "RelativePath": "js/download#[.{fingerprint}]?.js",
+      "RelativePath": "js/download.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dmpkhx1n3w",
-      "Integrity": "tWMrpCbPWG04IUfJiZm1D4IYB8XxkoZgqmG1Sf3YjsQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\download.js"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "app.906phpobxc.css",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2354"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qd+mDrrNzYh575TuD6xPjbhpZ0umaIzbXSralwdoIQY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 21 Jun 2025 22:15:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "906phpobxc"
-        },
-        {
-          "Name": "label",
-          "Value": "app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-qd+mDrrNzYh575TuD6xPjbhpZ0umaIzbXSralwdoIQY="
-        }
-      ]
-    },
-    {
-      "Route": "app.css",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2354"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qd+mDrrNzYh575TuD6xPjbhpZ0umaIzbXSralwdoIQY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 21 Jun 2025 22:15:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-qd+mDrrNzYh575TuD6xPjbhpZ0umaIzbXSralwdoIQY="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162720"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:53:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bpk8xqwxhs"
-        },
-        {
-          "Name": "label",
-          "Value": "bootstrap/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162720"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:53:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:53:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8inm30yfxf"
-        },
-        {
-          "Name": "label",
-          "Value": "bootstrap/bootstrap.min.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:53:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "CRMGraficaBlazor.bundle.scp.css",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CRMGraficaBlazor.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2765"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Jun 2025 23:31:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8="
-        }
-      ]
-    },
-    {
-      "Route": "CRMGraficaBlazor.rphluyqovi.bundle.scp.css",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CRMGraficaBlazor.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2765"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Jun 2025 23:31:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "rphluyqovi"
-        },
-        {
-          "Name": "label",
-          "Value": "CRMGraficaBlazor.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8="
-        }
-      ]
-    },
-    {
-      "Route": "CRMGraficaBlazor.rphluyqovi.styles.css",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CRMGraficaBlazor.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2765"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Jun 2025 23:31:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "rphluyqovi"
-        },
-        {
-          "Name": "label",
-          "Value": "CRMGraficaBlazor.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8="
-        }
-      ]
-    },
-    {
-      "Route": "CRMGraficaBlazor.styles.css",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CRMGraficaBlazor.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2765"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 22 Jun 2025 23:31:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-EW2xfUiaLlfVqDK01SPVYEXYPmZAiZxTLLM2Iy1WdC8="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\favicon.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1148"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:53:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ifv42okdf2"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.png",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\favicon.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1148"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:53:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
-        }
-      ]
-    },
-    {
-      "Route": "js/download.dmpkhx1n3w.js",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\js\\download.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "333"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tWMrpCbPWG04IUfJiZm1D4IYB8XxkoZgqmG1Sf3YjsQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:53:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "dmpkhx1n3w"
-        },
-        {
-          "Name": "label",
-          "Value": "js/download.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tWMrpCbPWG04IUfJiZm1D4IYB8XxkoZgqmG1Sf3YjsQ="
-        }
-      ]
-    },
-    {
-      "Route": "js/download.js",
-      "AssetFile": "S:\\CRMGrafica-master\\CRMGrafica-master\\CRMGrafica\\CRMGraficaBlazor\\wwwroot\\js\\download.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "333"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tWMrpCbPWG04IUfJiZm1D4IYB8XxkoZgqmG1Sf3YjsQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:53:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tWMrpCbPWG04IUfJiZm1D4IYB8XxkoZgqmG1Sf3YjsQ="
-        }
-      ]
+      "OriginalItemSpec": "wwwroot/js/download.js"
     }
   ]
 }

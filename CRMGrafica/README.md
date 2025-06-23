@@ -9,7 +9,7 @@ Sistema CRM completo desenvolvido para empresas gráficas, utilizando tecnologia
 ### Backend (.NET 8 API)
 - **ASP.NET Core Web API** - Framework principal da API
 - **Entity Framework Core** - ORM para acesso ao banco de dados
-- **SQLite** - Banco de dados (configurável para SQL Server)
+- **PostgreSQL** - Banco de dados
 - **ClosedXML** - Biblioteca para exportação de arquivos Excel
 
 ### Frontend (Blazor Server)
