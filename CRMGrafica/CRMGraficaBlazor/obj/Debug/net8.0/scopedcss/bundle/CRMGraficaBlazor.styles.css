@@ -1,50 +1,44 @@
 /* _content/CRMGraficaBlazor/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-xx0kuhs71y] {
-    position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9fafb;
 }
 
 main[b-xx0kuhs71y] {
     flex: 1;
+    padding: 1rem;
 }
 
 .sidebar[b-xx0kuhs71y] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background: linear-gradient(180deg, #052767 0%, #3a0647 70%);
+    color: white;
 }
 
 .top-row[b-xx0kuhs71y] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0 1.5rem;
     height: 3.5rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-    .top-row[b-xx0kuhs71y]  a, .top-row[b-xx0kuhs71y]  .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+.top-row a[b-xx0kuhs71y], .top-row .btn-link[b-xx0kuhs71y] {
+    text-decoration: none;
+    margin-left: 1rem;
+    color: #374151;
+    transition: color 0.2s;
+}
 
-    .top-row[b-xx0kuhs71y]  a:hover, .top-row[b-xx0kuhs71y]  .btn-link:hover {
-        text-decoration: underline;
-    }
-
-    .top-row[b-xx0kuhs71y]  a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-@media (max-width: 640.98px) {
-    .top-row[b-xx0kuhs71y] {
-        justify-content: space-between;
-    }
-
-    .top-row[b-xx0kuhs71y]  a, .top-row[b-xx0kuhs71y]  .btn-link {
-        margin-left: 0;
-    }
+.top-row a:hover[b-xx0kuhs71y], .top-row .btn-link:hover[b-xx0kuhs71y] {
+    color: #1f2937;
+    text-decoration: underline;
 }
 
 @media (min-width: 641px) {
@@ -54,169 +48,71 @@ main[b-xx0kuhs71y] {
 
     .sidebar[b-xx0kuhs71y] {
         width: 250px;
+        position: sticky;
+        top: 0;
         height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .top-row[b-xx0kuhs71y] {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .top-row.auth[b-xx0kuhs71y]  a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
-    .top-row[b-xx0kuhs71y], article[b-xx0kuhs71y] {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
     }
 }
-
-#blazor-error-ui[b-xx0kuhs71y] {
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-    #blazor-error-ui .dismiss[b-xx0kuhs71y] {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
 /* _content/CRMGraficaBlazor/Components/Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-96jebnvyw2] {
     appearance: none;
     cursor: pointer;
     width: 3.5rem;
     height: 2.5rem;
-    color: white;
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-toggler:checked[b-96jebnvyw2] {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.top-row[b-96jebnvyw2] {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 6px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.5rem;
 }
 
 .navbar-brand[b-96jebnvyw2] {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: white;
-    user-select: none;
+    font-weight: bold;
+    padding-left: 1rem;
 }
 
-/* Estilização dos itens do menu */
+.nav-scrollable[b-96jebnvyw2] {
+    padding: 1rem;
+    background-color: #052767;
+    height: 100%;
+    overflow-y: auto;
+}
+
 .nav-item[b-96jebnvyw2] {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.nav-item:first-of-type[b-96jebnvyw2] {
-    padding-top: 1rem;
-}
-
-.nav-item:last-of-type[b-96jebnvyw2] {
-    padding-bottom: 1rem;
-}
-
-/* CORREÇÃO: Ícones do Bootstrap - seletor corrigido de 'bi' para '.bi' */
-.bi[b-96jebnvyw2] {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem; /* Reduzido de 1.25rem para melhor proporção */
-    margin-right: 0.75rem; /* Aumentado de 0.5rem para mais espaço */
-    line-height: 1;
-    width: 1.2em; /* Largura fixa para consistência */
-    height: 1.2em; /* Altura fixa para consistência */
-    flex-shrink: 0; /* Impede que o ícone encolha */
-    vertical-align: middle;
-    /* REMOVIDO: position: relative; top: 1px; - não é mais necessário */
-}
-
-.nav-item[b-96jebnvyw2]  .nav-link {
+.nav-link[b-96jebnvyw2] {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    height: 3rem;
-    padding: 0 1rem;
-    color: #d7d7d7;
+    color: #d1d5db;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover[b-96jebnvyw2],
+.nav-link.active[b-96jebnvyw2] {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.nav-link .bi[b-96jebnvyw2] {
+    margin-right: 0.5rem;
     font-size: 1rem;
-    line-height: 1.5; /* Adicionado line-height consistente */
-}
-
-/* CORREÇÃO: Melhor especificidade para ícones dentro dos links */
-.nav-item[b-96jebnvyw2]  .nav-link .bi {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem; /* Consistente com a regra geral */
     line-height: 1;
-    width: 1.2em;
-    height: 1.2em;
-    margin-right: 0.75rem;
-    flex-shrink: 0;
 }
 
-/* REMOVIDO: .nav-item ::deep .nav-link span.bi - redundante com a correção acima */
-
-.nav-item[b-96jebnvyw2]  a.active {
-    background-color: rgba(255,255,255,0.37);
-    color: white;
-}
-
-.nav-item[b-96jebnvyw2]  .nav-link:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
-
-/* Menu lateral: escondido no mobile */
-.nav-scrollable[b-96jebnvyw2] {
-    display: none;
-}
-
-/* Mostra menu quando toggle marcado */
-.navbar-toggler:checked ~ .nav-scrollable[b-96jebnvyw2] {
-    display: block;
-}
-
-/* Responsividade: desktop sempre mostra menu e esconde toggle */
 @media (min-width: 641px) {
     .navbar-toggler[b-96jebnvyw2] {
         display: none;
     }
-
     .nav-scrollable[b-96jebnvyw2] {
         display: block;
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
     }
 }
-

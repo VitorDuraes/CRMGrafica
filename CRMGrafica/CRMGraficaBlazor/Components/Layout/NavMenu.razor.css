@@ -3,122 +3,60 @@
     cursor: pointer;
     width: 3.5rem;
     height: 2.5rem;
-    color: white;
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-toggler:checked {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.top-row {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 6px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.5rem;
 }
 
 .navbar-brand {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: white;
-    user-select: none;
+    font-weight: bold;
+    padding-left: 1rem;
 }
 
-/* Estilização dos itens do menu */
+.nav-scrollable {
+    padding: 1rem;
+    background-color: #052767;
+    height: 100%;
+    overflow-y: auto;
+}
+
 .nav-item {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.nav-item:first-of-type {
-    padding-top: 1rem;
-}
-
-.nav-item:last-of-type {
-    padding-bottom: 1rem;
-}
-
-/* CORREÇÃO: Ícones do Bootstrap - seletor corrigido de 'bi' para '.bi' */
-.bi {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem; /* Reduzido de 1.25rem para melhor proporção */
-    margin-right: 0.75rem; /* Aumentado de 0.5rem para mais espaço */
-    line-height: 1;
-    width: 1.2em; /* Largura fixa para consistência */
-    height: 1.2em; /* Altura fixa para consistência */
-    flex-shrink: 0; /* Impede que o ícone encolha */
-    vertical-align: middle;
-    /* REMOVIDO: position: relative; top: 1px; - não é mais necessário */
-}
-
-.nav-item ::deep .nav-link {
+.nav-link {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    height: 3rem;
-    padding: 0 1rem;
-    color: #d7d7d7;
+    color: #d1d5db;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.nav-link .bi {
+    margin-right: 0.5rem;
     font-size: 1rem;
-    line-height: 1.5; /* Adicionado line-height consistente */
-}
-
-/* CORREÇÃO: Melhor especificidade para ícones dentro dos links */
-.nav-item ::deep .nav-link .bi {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem; /* Consistente com a regra geral */
     line-height: 1;
-    width: 1.2em;
-    height: 1.2em;
-    margin-right: 0.75rem;
-    flex-shrink: 0;
 }
 
-/* REMOVIDO: .nav-item ::deep .nav-link span.bi - redundante com a correção acima */
-
-.nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.37);
-    color: white;
-}
-
-.nav-item ::deep .nav-link:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
-
-/* Menu lateral: escondido no mobile */
-.nav-scrollable {
-    display: none;
-}
-
-/* Mostra menu quando toggle marcado */
-.navbar-toggler:checked ~ .nav-scrollable {
-    display: block;
-}
-
-/* Responsividade: desktop sempre mostra menu e esconde toggle */
 @media (min-width: 641px) {
     .navbar-toggler {
         display: none;
     }
-
     .nav-scrollable {
         display: block;
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
     }
 }
-

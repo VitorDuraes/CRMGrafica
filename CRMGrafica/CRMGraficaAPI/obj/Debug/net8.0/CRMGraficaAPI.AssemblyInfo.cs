@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRMGraficaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+191e0fa8fc115cd21eeb2eee915ce68d05acd735")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ef2b01b6938c64c7cddcd468a2a238f5cdaf50c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRMGraficaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRMGraficaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
